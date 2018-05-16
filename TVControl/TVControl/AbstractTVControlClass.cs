@@ -12,20 +12,61 @@ namespace TVControl
 
         public abstract void Off();
 
-        public abstract string GetPowerStatus();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pct"></param>
+        /// <returns></returns>
+        public abstract string GetPowerStatus(string pct);
 
-        public abstract string SetPowerOn();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pct"></param>
+        /// <returns></returns>
+        public abstract string SetPowerOn(string pct);
 
-        public abstract string SetPowerOff();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pct"></param>
+        /// <returns></returns>
+        public abstract string SetPowerOff(string pct);
 
-        public abstract string GetVolMuteStatus();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pct"></param>
+        /// <returns></returns>
+        public abstract string GetVolMuteStatus(string pct);
 
-        public abstract string SetVolMuteOn();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pct"></param>
+        /// <returns></returns>
+        public abstract string SetVolMuteOn(string pct);
 
-        public abstract string SetVolMuteOff();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pct"></param>
+        /// <returns></returns>
+        public abstract string SetVolMuteOff(string pct);
 
-        public abstract string GetVolValue();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pct"></param>
+        /// <returns></returns>
+        public abstract string GetVolValue(string pct);
 
-        public abstract string SetVolValue(int volValue);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="volValue"></param>
+        /// <param name="pct"></param>
+        /// <returns></returns>
+        public abstract string SetVolValue(int volValue, string pct);
     }
 }

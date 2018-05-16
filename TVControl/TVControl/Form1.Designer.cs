@@ -28,21 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ddbTV = new System.Windows.Forms.ComboBox();
-            this.ddbModel = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ddbCommType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.progConnect = new System.Windows.Forms.ProgressBar();
             this.btnConnect = new System.Windows.Forms.Button();
-            this.gbPower = new System.Windows.Forms.GroupBox();
-            this.btnPowerOff = new System.Windows.Forms.Button();
-            this.btnPowerOn = new System.Windows.Forms.Button();
-            this.gbVolume = new System.Windows.Forms.GroupBox();
-            this.txtVolInfo = new System.Windows.Forms.TextBox();
-            this.btnVolDown = new System.Windows.Forms.Button();
-            this.btnVolUp = new System.Windows.Forms.Button();
             this.btnDisconnect = new System.Windows.Forms.Button();
             this.gBoxRJ45 = new System.Windows.Forms.GroupBox();
             this.txtPort = new System.Windows.Forms.TextBox();
@@ -50,11 +40,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gBoxRS232 = new System.Windows.Forms.GroupBox();
-            this.ddbStopbits = new System.Windows.Forms.ComboBox();
-            this.ddbDataBits = new System.Windows.Forms.ComboBox();
-            this.ddbParity = new System.Windows.Forms.ComboBox();
-            this.ddbBaudRate = new System.Windows.Forms.ComboBox();
-            this.ddbPorts = new System.Windows.Forms.ComboBox();
+            this.txtStopbits = new System.Windows.Forms.TextBox();
+            this.txtDatabits = new System.Windows.Forms.TextBox();
+            this.txtParity = new System.Windows.Forms.TextBox();
+            this.txtBaudRate = new System.Windows.Forms.TextBox();
+            this.txtCom = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -62,33 +52,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtTVID = new System.Windows.Forms.TextBox();
-            this.btnSetVolValue = new System.Windows.Forms.Button();
-            this.btnVolMute = new System.Windows.Forms.Button();
-            this.btnVolNotMute = new System.Windows.Forms.Button();
-            this.gbPower.SuspendLayout();
-            this.gbVolume.SuspendLayout();
+            this.btnRunApp = new System.Windows.Forms.Button();
+            this.txtTVModel = new System.Windows.Forms.TextBox();
+            this.txtTVSeries = new System.Windows.Forms.TextBox();
+            this.txtCommunicationType = new System.Windows.Forms.TextBox();
             this.gBoxRJ45.SuspendLayout();
             this.gBoxRS232.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ddbTV
-            // 
-            this.ddbTV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddbTV.FormattingEnabled = true;
-            this.ddbTV.Location = new System.Drawing.Point(45, 19);
-            this.ddbTV.Name = "ddbTV";
-            this.ddbTV.Size = new System.Drawing.Size(101, 21);
-            this.ddbTV.TabIndex = 0;
-            this.ddbTV.SelectedIndexChanged += new System.EventHandler(this.ddbTV_SelectedIndexChanged);
-            // 
-            // ddbModel
-            // 
-            this.ddbModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddbModel.FormattingEnabled = true;
-            this.ddbModel.Location = new System.Drawing.Point(296, 19);
-            this.ddbModel.Name = "ddbModel";
-            this.ddbModel.Size = new System.Drawing.Size(121, 21);
-            this.ddbModel.TabIndex = 1;
             // 
             // label1
             // 
@@ -99,16 +69,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "TV:";
             // 
-            // ddbCommType
-            // 
-            this.ddbCommType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddbCommType.FormattingEnabled = true;
-            this.ddbCommType.Location = new System.Drawing.Point(537, 20);
-            this.ddbCommType.Name = "ddbCommType";
-            this.ddbCommType.Size = new System.Drawing.Size(113, 21);
-            this.ddbCommType.TabIndex = 4;
-            this.ddbCommType.SelectedIndexChanged += new System.EventHandler(this.ddbCommType_SelectedIndexChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -116,7 +76,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Model:";
+            this.label2.Text = "Series:";
             // 
             // label3
             // 
@@ -144,81 +104,6 @@
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
-            // gbPower
-            // 
-            this.gbPower.Controls.Add(this.btnPowerOff);
-            this.gbPower.Controls.Add(this.btnPowerOn);
-            this.gbPower.Enabled = false;
-            this.gbPower.Location = new System.Drawing.Point(12, 214);
-            this.gbPower.Name = "gbPower";
-            this.gbPower.Size = new System.Drawing.Size(211, 69);
-            this.gbPower.TabIndex = 13;
-            this.gbPower.TabStop = false;
-            this.gbPower.Text = "Power";
-            // 
-            // btnPowerOff
-            // 
-            this.btnPowerOff.Location = new System.Drawing.Point(106, 25);
-            this.btnPowerOff.Name = "btnPowerOff";
-            this.btnPowerOff.Size = new System.Drawing.Size(94, 27);
-            this.btnPowerOff.TabIndex = 1;
-            this.btnPowerOff.Text = "Off";
-            this.btnPowerOff.UseVisualStyleBackColor = true;
-            this.btnPowerOff.Click += new System.EventHandler(this.btnPowerOff_Click);
-            // 
-            // btnPowerOn
-            // 
-            this.btnPowerOn.Location = new System.Drawing.Point(6, 25);
-            this.btnPowerOn.Name = "btnPowerOn";
-            this.btnPowerOn.Size = new System.Drawing.Size(94, 27);
-            this.btnPowerOn.TabIndex = 0;
-            this.btnPowerOn.Text = "On";
-            this.btnPowerOn.UseVisualStyleBackColor = true;
-            this.btnPowerOn.Click += new System.EventHandler(this.btnPowerOn_Click);
-            // 
-            // gbVolume
-            // 
-            this.gbVolume.Controls.Add(this.btnVolNotMute);
-            this.gbVolume.Controls.Add(this.btnVolMute);
-            this.gbVolume.Controls.Add(this.btnSetVolValue);
-            this.gbVolume.Controls.Add(this.txtVolInfo);
-            this.gbVolume.Controls.Add(this.btnVolDown);
-            this.gbVolume.Controls.Add(this.btnVolUp);
-            this.gbVolume.Location = new System.Drawing.Point(329, 214);
-            this.gbVolume.Name = "gbVolume";
-            this.gbVolume.Size = new System.Drawing.Size(322, 96);
-            this.gbVolume.TabIndex = 14;
-            this.gbVolume.TabStop = false;
-            this.gbVolume.Text = "Volume";
-            // 
-            // txtVolInfo
-            // 
-            this.txtVolInfo.Enabled = false;
-            this.txtVolInfo.Location = new System.Drawing.Point(136, 28);
-            this.txtVolInfo.Name = "txtVolInfo";
-            this.txtVolInfo.Size = new System.Drawing.Size(86, 20);
-            this.txtVolInfo.TabIndex = 2;
-            // 
-            // btnVolDown
-            // 
-            this.btnVolDown.Location = new System.Drawing.Point(80, 26);
-            this.btnVolDown.Name = "btnVolDown";
-            this.btnVolDown.Size = new System.Drawing.Size(47, 26);
-            this.btnVolDown.TabIndex = 1;
-            this.btnVolDown.Text = "Down";
-            this.btnVolDown.UseVisualStyleBackColor = true;
-            this.btnVolDown.Click += new System.EventHandler(this.btnVolDown_Click);
-            // 
-            // btnVolUp
-            // 
-            this.btnVolUp.Location = new System.Drawing.Point(21, 26);
-            this.btnVolUp.Name = "btnVolUp";
-            this.btnVolUp.Size = new System.Drawing.Size(50, 26);
-            this.btnVolUp.TabIndex = 0;
-            this.btnVolUp.Text = "Up";
-            this.btnVolUp.UseVisualStyleBackColor = true;
-            this.btnVolUp.Click += new System.EventHandler(this.btnVolUp_Click);
-            // 
             // btnDisconnect
             // 
             this.btnDisconnect.Location = new System.Drawing.Point(538, 159);
@@ -244,6 +129,7 @@
             // 
             // txtPort
             // 
+            this.txtPort.Enabled = false;
             this.txtPort.Location = new System.Drawing.Point(84, 49);
             this.txtPort.Name = "txtPort";
             this.txtPort.Size = new System.Drawing.Size(123, 20);
@@ -251,6 +137,7 @@
             // 
             // txtIPAddr
             // 
+            this.txtIPAddr.Enabled = false;
             this.txtIPAddr.Location = new System.Drawing.Point(84, 23);
             this.txtIPAddr.Name = "txtIPAddr";
             this.txtIPAddr.Size = new System.Drawing.Size(123, 20);
@@ -276,11 +163,11 @@
             // 
             // gBoxRS232
             // 
-            this.gBoxRS232.Controls.Add(this.ddbStopbits);
-            this.gBoxRS232.Controls.Add(this.ddbDataBits);
-            this.gBoxRS232.Controls.Add(this.ddbParity);
-            this.gBoxRS232.Controls.Add(this.ddbBaudRate);
-            this.gBoxRS232.Controls.Add(this.ddbPorts);
+            this.gBoxRS232.Controls.Add(this.txtStopbits);
+            this.gBoxRS232.Controls.Add(this.txtDatabits);
+            this.gBoxRS232.Controls.Add(this.txtParity);
+            this.gBoxRS232.Controls.Add(this.txtBaudRate);
+            this.gBoxRS232.Controls.Add(this.txtCom);
             this.gBoxRS232.Controls.Add(this.label10);
             this.gBoxRS232.Controls.Add(this.label9);
             this.gBoxRS232.Controls.Add(this.label8);
@@ -293,50 +180,45 @@
             this.gBoxRS232.TabStop = false;
             this.gBoxRS232.Text = "RS232 Settings";
             // 
-            // ddbStopbits
+            // txtStopbits
             // 
-            this.ddbStopbits.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddbStopbits.FormattingEnabled = true;
-            this.ddbStopbits.Location = new System.Drawing.Point(296, 48);
-            this.ddbStopbits.Name = "ddbStopbits";
-            this.ddbStopbits.Size = new System.Drawing.Size(54, 21);
-            this.ddbStopbits.TabIndex = 9;
+            this.txtStopbits.Enabled = false;
+            this.txtStopbits.Location = new System.Drawing.Point(295, 49);
+            this.txtStopbits.Name = "txtStopbits";
+            this.txtStopbits.Size = new System.Drawing.Size(58, 20);
+            this.txtStopbits.TabIndex = 26;
             // 
-            // ddbDataBits
+            // txtDatabits
             // 
-            this.ddbDataBits.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddbDataBits.FormattingEnabled = true;
-            this.ddbDataBits.Location = new System.Drawing.Point(226, 48);
-            this.ddbDataBits.Name = "ddbDataBits";
-            this.ddbDataBits.Size = new System.Drawing.Size(54, 21);
-            this.ddbDataBits.TabIndex = 8;
+            this.txtDatabits.Enabled = false;
+            this.txtDatabits.Location = new System.Drawing.Point(226, 49);
+            this.txtDatabits.Name = "txtDatabits";
+            this.txtDatabits.Size = new System.Drawing.Size(46, 20);
+            this.txtDatabits.TabIndex = 25;
             // 
-            // ddbParity
+            // txtParity
             // 
-            this.ddbParity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddbParity.FormattingEnabled = true;
-            this.ddbParity.Location = new System.Drawing.Point(156, 48);
-            this.ddbParity.Name = "ddbParity";
-            this.ddbParity.Size = new System.Drawing.Size(54, 21);
-            this.ddbParity.TabIndex = 7;
+            this.txtParity.Enabled = false;
+            this.txtParity.Location = new System.Drawing.Point(156, 49);
+            this.txtParity.Name = "txtParity";
+            this.txtParity.Size = new System.Drawing.Size(51, 20);
+            this.txtParity.TabIndex = 24;
             // 
-            // ddbBaudRate
+            // txtBaudRate
             // 
-            this.ddbBaudRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddbBaudRate.FormattingEnabled = true;
-            this.ddbBaudRate.Location = new System.Drawing.Point(88, 48);
-            this.ddbBaudRate.Name = "ddbBaudRate";
-            this.ddbBaudRate.Size = new System.Drawing.Size(54, 21);
-            this.ddbBaudRate.TabIndex = 6;
+            this.txtBaudRate.Enabled = false;
+            this.txtBaudRate.Location = new System.Drawing.Point(80, 49);
+            this.txtBaudRate.Name = "txtBaudRate";
+            this.txtBaudRate.Size = new System.Drawing.Size(58, 20);
+            this.txtBaudRate.TabIndex = 23;
             // 
-            // ddbPorts
+            // txtCom
             // 
-            this.ddbPorts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddbPorts.FormattingEnabled = true;
-            this.ddbPorts.Location = new System.Drawing.Point(18, 48);
-            this.ddbPorts.Name = "ddbPorts";
-            this.ddbPorts.Size = new System.Drawing.Size(54, 21);
-            this.ddbPorts.TabIndex = 5;
+            this.txtCom.Enabled = false;
+            this.txtCom.Location = new System.Drawing.Point(17, 49);
+            this.txtCom.Name = "txtCom";
+            this.txtCom.Size = new System.Drawing.Size(47, 20);
+            this.txtCom.TabIndex = 22;
             // 
             // label10
             // 
@@ -368,7 +250,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(85, 23);
+            this.label7.Location = new System.Drawing.Point(77, 23);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 1;
@@ -394,66 +276,67 @@
             // 
             // txtTVID
             // 
+            this.txtTVID.Enabled = false;
             this.txtTVID.Location = new System.Drawing.Point(196, 20);
             this.txtTVID.Name = "txtTVID";
             this.txtTVID.Size = new System.Drawing.Size(49, 20);
             this.txtTVID.TabIndex = 4;
             // 
-            // btnSetVolValue
+            // btnRunApp
             // 
-            this.btnSetVolValue.Location = new System.Drawing.Point(236, 26);
-            this.btnSetVolValue.Name = "btnSetVolValue";
-            this.btnSetVolValue.Size = new System.Drawing.Size(80, 23);
-            this.btnSetVolValue.TabIndex = 3;
-            this.btnSetVolValue.Text = "Set";
-            this.btnSetVolValue.UseVisualStyleBackColor = true;
-            this.btnSetVolValue.Click += new System.EventHandler(this.btnSetVolValue_Click);
+            this.btnRunApp.Location = new System.Drawing.Point(13, 197);
+            this.btnRunApp.Name = "btnRunApp";
+            this.btnRunApp.Size = new System.Drawing.Size(638, 43);
+            this.btnRunApp.TabIndex = 19;
+            this.btnRunApp.Text = "Run";
+            this.btnRunApp.UseVisualStyleBackColor = true;
+            this.btnRunApp.Click += new System.EventHandler(this.btnRunApp_Click);
             // 
-            // btnVolMute
+            // txtTVModel
             // 
-            this.btnVolMute.Location = new System.Drawing.Point(21, 58);
-            this.btnVolMute.Name = "btnVolMute";
-            this.btnVolMute.Size = new System.Drawing.Size(75, 23);
-            this.btnVolMute.TabIndex = 4;
-            this.btnVolMute.Text = "Mute";
-            this.btnVolMute.UseVisualStyleBackColor = true;
-            this.btnVolMute.Click += new System.EventHandler(this.btnVolMute_Click);
+            this.txtTVModel.Enabled = false;
+            this.txtTVModel.Location = new System.Drawing.Point(45, 20);
+            this.txtTVModel.Name = "txtTVModel";
+            this.txtTVModel.Size = new System.Drawing.Size(99, 20);
+            this.txtTVModel.TabIndex = 20;
             // 
-            // btnVolNotMute
+            // txtTVSeries
             // 
-            this.btnVolNotMute.Location = new System.Drawing.Point(106, 58);
-            this.btnVolNotMute.Name = "btnVolNotMute";
-            this.btnVolNotMute.Size = new System.Drawing.Size(75, 23);
-            this.btnVolNotMute.TabIndex = 5;
-            this.btnVolNotMute.Text = "Not mute";
-            this.btnVolNotMute.UseVisualStyleBackColor = true;
-            this.btnVolNotMute.Click += new System.EventHandler(this.btnVolNotMute_Click);
+            this.txtTVSeries.Enabled = false;
+            this.txtTVSeries.Location = new System.Drawing.Point(296, 20);
+            this.txtTVSeries.Name = "txtTVSeries";
+            this.txtTVSeries.Size = new System.Drawing.Size(121, 20);
+            this.txtTVSeries.TabIndex = 21;
+            // 
+            // txtCommunicationType
+            // 
+            this.txtCommunicationType.Enabled = false;
+            this.txtCommunicationType.Location = new System.Drawing.Point(535, 20);
+            this.txtCommunicationType.Name = "txtCommunicationType";
+            this.txtCommunicationType.Size = new System.Drawing.Size(115, 20);
+            this.txtCommunicationType.TabIndex = 22;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 332);
+            this.ClientSize = new System.Drawing.Size(668, 252);
+            this.Controls.Add(this.txtCommunicationType);
+            this.Controls.Add(this.txtTVSeries);
+            this.Controls.Add(this.txtTVModel);
+            this.Controls.Add(this.btnRunApp);
             this.Controls.Add(this.txtTVID);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.gBoxRS232);
             this.Controls.Add(this.gBoxRJ45);
             this.Controls.Add(this.btnDisconnect);
-            this.Controls.Add(this.gbVolume);
-            this.Controls.Add(this.gbPower);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.progConnect);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.ddbCommType);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ddbModel);
-            this.Controls.Add(this.ddbTV);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.gbPower.ResumeLayout(false);
-            this.gbVolume.ResumeLayout(false);
-            this.gbVolume.PerformLayout();
             this.gBoxRJ45.ResumeLayout(false);
             this.gBoxRJ45.PerformLayout();
             this.gBoxRS232.ResumeLayout(false);
@@ -464,22 +347,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox ddbTV;
-        private System.Windows.Forms.ComboBox ddbModel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox ddbCommType;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ProgressBar progConnect;
         private System.Windows.Forms.Button btnConnect;
-        private System.Windows.Forms.GroupBox gbPower;
-        private System.Windows.Forms.Button btnPowerOff;
-        private System.Windows.Forms.Button btnPowerOn;
-        private System.Windows.Forms.GroupBox gbVolume;
-        private System.Windows.Forms.TextBox txtVolInfo;
-        private System.Windows.Forms.Button btnVolDown;
-        private System.Windows.Forms.Button btnVolUp;
         private System.Windows.Forms.Button btnDisconnect;
         private System.Windows.Forms.GroupBox gBoxRJ45;
         private System.Windows.Forms.GroupBox gBoxRS232;
@@ -492,16 +364,17 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox ddbStopbits;
-        private System.Windows.Forms.ComboBox ddbDataBits;
-        private System.Windows.Forms.ComboBox ddbParity;
-        private System.Windows.Forms.ComboBox ddbBaudRate;
-        private System.Windows.Forms.ComboBox ddbPorts;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtTVID;
-        private System.Windows.Forms.Button btnVolMute;
-        private System.Windows.Forms.Button btnSetVolValue;
-        private System.Windows.Forms.Button btnVolNotMute;
+        private System.Windows.Forms.Button btnRunApp;
+        private System.Windows.Forms.TextBox txtTVModel;
+        private System.Windows.Forms.TextBox txtTVSeries;
+        private System.Windows.Forms.TextBox txtCommunicationType;
+        private System.Windows.Forms.TextBox txtStopbits;
+        private System.Windows.Forms.TextBox txtDatabits;
+        private System.Windows.Forms.TextBox txtParity;
+        private System.Windows.Forms.TextBox txtBaudRate;
+        private System.Windows.Forms.TextBox txtCom;
     }
 }
 

@@ -44,9 +44,8 @@ namespace TVControl
             }
         }
 
-        public override string GetPowerStatus()
+        public override string GetPowerStatus(string pct)
         {
-            string pct = _jsonFile["Power"]["status"].ToString().Replace("XX", _tvID);
             pct = GetSum(pct);
             byte[] pctBytes = GetCommandBytes(pct);
             bool success = false;
@@ -71,9 +70,8 @@ namespace TVControl
             return "Error";
         }
 
-        public override string SetPowerOn()
+        public override string SetPowerOn(string pct)
         {
-            string pct = _jsonFile["Power"]["on"].ToString().Replace("XX", _tvID);
             pct = GetSum(pct);
             byte[] pctBytes = GetCommandBytes(pct);
             bool success = false;
@@ -94,9 +92,8 @@ namespace TVControl
             return "Error";
         }
 
-        public override string SetPowerOff()
+        public override string SetPowerOff(string pct)
         {
-            string pct = _jsonFile["Power"]["off"].ToString().Replace("XX", _tvID);
             pct = GetSum(pct);
             byte[] pctBytes = GetCommandBytes(pct);
             bool success = false;
@@ -117,9 +114,8 @@ namespace TVControl
             return "Error";
         }
 
-        public override string GetVolMuteStatus()
+        public override string GetVolMuteStatus(string pct)
         {
-            string pct = _jsonFile["Volume"]["mute"]["status"].ToString().Replace("XX", _tvID);
             pct = GetSum(pct);
             byte[] pctBytes = GetCommandBytes(pct);
             bool success;
@@ -144,9 +140,8 @@ namespace TVControl
             return "Error";
         }
 
-        public override string SetVolMuteOn()
+        public override string SetVolMuteOn(string pct)
         {
-            string pct = _jsonFile["Volume"]["mute"]["on"].ToString().Replace("XX", _tvID);
             pct = GetSum(pct);
             byte[] pctBytes = GetCommandBytes(pct);
             bool success = false;
@@ -167,9 +162,8 @@ namespace TVControl
             return "Error";
         }
 
-        public override string SetVolMuteOff()
+        public override string SetVolMuteOff(string pct)
         {
-            string pct = _jsonFile["Volume"]["mute"]["off"].ToString().Replace("XX", _tvID);
             pct = GetSum(pct);
             byte[] pctBytes = GetCommandBytes(pct);
             bool success = false;
@@ -190,9 +184,8 @@ namespace TVControl
             return "Error";
         }
 
-        public override string GetVolValue()
+        public override string GetVolValue(string pct)
         {
-            string pct = _jsonFile["Volume"]["control"]["status"].ToString().Replace("XX", _tvID);
             pct = GetSum(pct);
             byte[] pctBytes = GetCommandBytes(pct);
             bool success = false;
@@ -213,11 +206,10 @@ namespace TVControl
             return "Error";
         }
 
-        public override string SetVolValue(int volValue)
+        public override string SetVolValue(int volValue, string pct)
         {
             bool success = false;
             string volume = volValue.ToString();
-            string pct = _jsonFile["Volume"]["control"]["setvalue"].ToString().Replace("XX", _tvID);
             
             if(volValue < 10)
             {
