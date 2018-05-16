@@ -1,0 +1,19 @@
+{
+    "Status":"AA-00-XX-00-SS",
+    "Power":{
+        "status":"AA-11-XX-00-SS",
+        "on":"AA-11-XX-01-01-SS",
+        "off":"AA-11-XX-01-00-SS"
+    },
+    "Volume":{
+        "mute":{
+            "status":"AA-13-XX-00-SS",
+            "on":"AA-13-XX-01-01-SS",
+            "off":"AA-13-XX-01-00-SS"
+        },
+        "control":{
+            "status":"AA-12-XX-00-SS",
+            "setvalue":"AA-12-XX-01-YY-SS"
+        }
+    }
+}
